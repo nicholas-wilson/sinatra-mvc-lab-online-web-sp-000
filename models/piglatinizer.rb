@@ -9,13 +9,13 @@ class PigLatinizer
     latin_string = ''
     @words.each do |word|
       pig_word = ''
-      letters = word.split('')
-      if letters[0].downcase == 'a' || letters[0].downcase == 'e' || letters[0].downcase == 'o' || letters[0].downcase == 'i' || letters[0].downcase == 'u'
+      # letters = word.split('')
+      if word.chr.downcase == 'a' || word.chr.downcase == 'e' || word.chr.downcase == 'o' || word.chr.downcase == 'i' || word.chr.downcase == 'u'
         pig_word = word + 'way'
       else
         consonant_tag = ''
         rest_of_word = ''
-        stop_at = letters.index(/[aeiou]/)
+        stop_at = letters.index(/[aeiouAEIOU]/)
         counter = 0
         while counter < stop_at do
           consonant_tag += letters[counter]
