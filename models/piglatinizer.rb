@@ -11,7 +11,7 @@ class PigLatinizer
       pig_word = ''
       letters = word.split('')
       if letter == 'a' || letter == 'e' || letter == 'o' || letter == 'i' || letter == 'u'
-
+        pig_word = word + 'way'
       else
         endtag = 'ay'
         letters.each do |letter|
