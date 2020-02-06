@@ -14,6 +14,7 @@ class PigLatinizer
         pig_word = word + 'way'
       else
         consonant_tag = ''
+        letters.index(/[aeiou]/)
         letters.each do |letter|
 
         end
