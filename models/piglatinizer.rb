@@ -16,6 +16,7 @@ class PigLatinizer
         consonant_tag = ''
         rest_of_word = ''
         stop_at = letters.index(/[aeiou]/)
+        raise stop_at
         counter = 0
         while counter < stop_at do
           consonant_tag += letters[counter]
