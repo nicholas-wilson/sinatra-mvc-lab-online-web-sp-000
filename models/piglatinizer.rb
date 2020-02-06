@@ -3,7 +3,7 @@ class PigLatinizer
 
   def piglatinize(text)
     latin_string = ''
-    if text.split[0].size == 1
+    if text.split(' ').size == 1
       latin_string = turn_word(text)
     else
       @words = text.split(' ')
