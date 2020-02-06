@@ -10,8 +10,13 @@ class PigLatinizer
     @words.each do |word|
       endtag = ''
       letters = word.split('')
-      letters.each do |letter|
+      if letter == 'a' || letter == 'e' || letter == 'o' || letter == 'i' || letter == 'u'
+        endtag = 'way'
+      else
+      endtag = 'ay'
+        letters.each do |letter|
 
+        end
       end
     end
   end
