@@ -19,7 +19,7 @@ class PigLatinizer
           consonant_tag += letters[counter]
           counter += 1
         end
-        consonant_tag = ''
+        consonant_tag = word.substr(0, counter - 1)
         rest_of_word = word.substr(counter, word.size - 1)
       end
       latin_string += ' ' + pig_word
