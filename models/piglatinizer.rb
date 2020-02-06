@@ -10,7 +10,7 @@ class PigLatinizer
     @words.each do |word|
       pig_word = ''
       letters = word.split('')
-      if letter == 'a' || letter == 'e' || letter == 'o' || letter == 'i' || letter == 'u'
+      if letters[0] == 'a' || letters[0] == 'e' || letters[0] == 'o' || letters[0] == 'i' || letters[0] == 'u'
         pig_word = word + 'way'
       else
         consonant_tag = ''
