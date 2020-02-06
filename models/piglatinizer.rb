@@ -21,6 +21,7 @@ class PigLatinizer
         end
         consonant_tag = word.substr(0, counter - 1)
         rest_of_word = word.substr(counter, word.size - 1)
+        pig_word = rest_of_word + consonant_tag + 'ay'
       end
       latin_string += ' ' + pig_word
     end
