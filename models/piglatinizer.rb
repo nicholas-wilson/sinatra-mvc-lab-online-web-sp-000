@@ -15,6 +15,7 @@ class PigLatinizer
       else
         consonant_tag = ''
         stop_at = letters.index(/[aeiou]/)
+        counter = 0
         letters.each do |letter|
 
         end
