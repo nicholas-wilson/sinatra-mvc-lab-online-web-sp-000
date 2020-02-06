@@ -14,7 +14,7 @@ class PigLatinizer
         pig_word = word + 'way'
       else
         split_point = word.index(/[aeiouAEIOU]/)
-        consonant_tag = word.slice(0, split_point + 1)
+        consonant_tag = word.slice(0, split_point)
         rest_of_word = word.slice(split_point, word.size)
         pig_word = rest_of_word + consonant_tag + 'ay'
       end
