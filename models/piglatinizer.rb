@@ -21,6 +21,7 @@ class PigLatinizer
           consonant_tag += letters[counter]
           counter += 1
         end
+        counter -= 1
         counter.times do
           letters[0].delete
         end
