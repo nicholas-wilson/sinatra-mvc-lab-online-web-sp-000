@@ -8,12 +8,12 @@ class PigLatinizer
   def turn_to_pig_latin
     latin_words = []
     @words.each do |word|
-      endtag = ''
+      pig_word = ''
       letters = word.split('')
       if letter == 'a' || letter == 'e' || letter == 'o' || letter == 'i' || letter == 'u'
-        endtag = 'way'
+
       else
-      endtag = 'ay'
+        endtag = 'ay'
         letters.each do |letter|
 
         end
