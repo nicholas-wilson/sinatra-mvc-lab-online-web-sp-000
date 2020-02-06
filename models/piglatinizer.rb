@@ -8,7 +8,7 @@ class PigLatinizer
   def turn_to_pig_latin
     latin_string = ''
     @words.each do |word|
-      pig_word = ''
+      pig_word = turn_word(word)
       # letters = word.split('')
       if word.chr.downcase == 'a' || word.chr.downcase == 'e' || word.chr.downcase == 'o' || word.chr.downcase == 'i' || word.chr.downcase == 'u'
         pig_word = word + 'way'
