@@ -1,13 +1,9 @@
 class PigLatinizer
   attr_accessor :words
 
-  def initialize(text='')
-    @words = text.split(' ')
-  end
-
   def piglatinize(text=nil)
     latin_string = ''
-    if @words.size == 0
+    if text.split[0].size == 1
       @words = text.split(' ')
     end
     counter = 0
