@@ -9,6 +9,7 @@ class PigLatinizer
     latin_string = ''
     if @words.size == 0
       @words = text.split(' ')
+    end
     @words.each do |word|
       pig_word = turn_word(word)
       latin_string += ' ' + pig_word
