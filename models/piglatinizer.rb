@@ -13,7 +13,7 @@ class PigLatinizer
       if letter == 'a' || letter == 'e' || letter == 'o' || letter == 'i' || letter == 'u'
         pig_word = word + 'way'
       else
-        endtag = 'ay'
+        consonant_tag = ''
         letters.each do |letter|
 
         end
