@@ -10,24 +10,23 @@ class PigLatinizer
     @words.each do |word|
       pig_word = ''
       letters = word.split('')
-      puts letters
-      # if letters[0] == 'a' || letters[0] == 'e' || letters[0] == 'o' || letters[0] == 'i' || letters[0] == 'u'
-      #   pig_word = word + 'way'
-      # else
-      #   consonant_tag = ''
-      #   rest_of_word = ''
-      #   stop_at = letters.index(/[aeiou]/)
-      #   counter = 0
-      #   while counter < stop_at do
-      #     consonant_tag += letters[counter]
-      #     counter += 1
-      #   end
-      #   counter -= 1
-      #   counter.times do
-      #     letters[0].delete
-      #   end
-      # end
-      # latin_string += ' ' + word
+      if letters[0].downcase == 'a' || letters[0].downcase == 'e' || letters[0].downcase == 'o' || letters[0].downcase == 'i' || letters[0].downcase == 'u'
+        pig_word = word + 'way'
+      else
+        consonant_tag = ''
+        rest_of_word = ''
+        stop_at = letters.index(/[aeiou]/)
+        counter = 0
+        while counter < stop_at do
+          consonant_tag += letters[counter]
+          counter += 1
+        end
+        counter -= 1
+        counter.times do
+          letters[0].delete
+        end
+      end
+      latin_string += ' ' + word
     end
     latin_string
   end
