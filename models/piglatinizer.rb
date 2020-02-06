@@ -18,6 +18,7 @@ class PigLatinizer
       else
         latin_string += ' '  + pig_word
       end
+      counter += 1
     end
     latin_string
   end
