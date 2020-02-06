@@ -8,7 +8,7 @@ class PigLatinizer
   def turn_to_pig_latin
     latin_words = []
     @words.each do |word|
-
+      letters = word.split('')
     end
   end
 
