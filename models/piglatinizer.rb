@@ -13,18 +13,14 @@ class PigLatinizer
       if word.chr.downcase == 'a' || word.chr.downcase == 'e' || word.chr.downcase == 'o' || word.chr.downcase == 'i' || word.chr.downcase == 'u'
         pig_word = word + 'way'
       else
-        consonant_tag = ''
-        rest_of_word = ''
         stop_at = letters.index(/[aeiouAEIOU]/)
         counter = 0
         while counter < stop_at do
           consonant_tag += letters[counter]
           counter += 1
         end
-        counter -= 1
-        counter.times do
-          letters[0].delete
-        end
+        consonant_tag = ''
+        rest_of_word = word.substr(counter, word.size - 1)
       end
       latin_string += ' ' + pig_word
     end
