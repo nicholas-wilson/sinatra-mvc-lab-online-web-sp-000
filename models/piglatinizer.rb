@@ -12,7 +12,7 @@ class PigLatinizer
     end
     @words.each do |word|
       pig_word = turn_word(word)
-      latin_string += ' ' + pig_word
+      latin_string += pig_word
     end
     latin_string
   end
