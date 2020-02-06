@@ -23,9 +23,4 @@ class PigLatinizer
       end
     end
   end
-
-  def self.call
-
-    # return pig latinized text
-  end
 end
