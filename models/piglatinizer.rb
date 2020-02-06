@@ -25,7 +25,7 @@ class PigLatinizer
           letters[0].delete
         end
       end
-      
+
     end
     latin_words
   end
