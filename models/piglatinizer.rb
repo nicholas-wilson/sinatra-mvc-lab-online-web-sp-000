@@ -14,12 +14,14 @@ class PigLatinizer
         pig_word = word + 'way'
       else
         consonant_tag = ''
+        rest_of_word = ''
         stop_at = letters.index(/[aeiou]/)
         counter = 0
         while counter < stop_at do
           consonant_tag += letters[counter]
           counter += 1
         end
+
       end
     end
   end
