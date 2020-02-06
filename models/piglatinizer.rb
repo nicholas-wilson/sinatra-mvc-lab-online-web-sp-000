@@ -4,17 +4,19 @@ class PigLatinizer
   def piglatinize(text)
     latin_string = ''
     if text.split[0].size == 1
+      latin_string = turn_word(text)
+    else
       @words = text.split(' ')
-    end
-    counter = 0
-    @words.each do |word|
-      pig_word = turn_word(word)
-      if counter == 0
-        latin_string += pig_word
-      else
-        latin_string += ' '  + pig_word
+      counter = 0
+      @words.each do |word|
+        pig_word = turn_word(word)
+        if counter == 0
+          latin_string += pig_word
+        else
+          latin_string += ' '  + pig_word
+        end
+        counter += 1
       end
-      counter += 1
     end
     latin_string
   end
