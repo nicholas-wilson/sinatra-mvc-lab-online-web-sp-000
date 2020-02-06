@@ -5,8 +5,10 @@ class PigLatinizer
     @words = text.split(' ')
   end
 
-  def turn_to_pig_latin
+  def piglatinize(text=nil)
     latin_string = ''
+    if @words.size == 0
+      @words = text.split(' ')
     @words.each do |word|
       pig_word = turn_word(word)
       latin_string += ' ' + pig_word
